@@ -9,20 +9,7 @@
 </body>
 <script>
     let engine = new p2pml.hlsjs.Engine({segments: {swarmId: '5f98b562977c5f4c7460dd9f'}, loader: {
-        httpUseRanges: true, WaitForTracker: true, WaitForTrackerCounter:1000,
-        settings: {
-            rtcConfig: {
-                iceServers: [
-                    { urls: "stun:turn.voodfy.com:5349?transport=udp" },
-                    {
-                        urls: "turn:turn.voodfy.com:5349?transport=udp",
-                        username: "admin",
-                        credential: "d098ec2546d3c93"
-                    },
-                ]
-            }
-        },
-    }});
+        httpUseRanges: true, WaitForTracker: true, WaitForTrackerCounter:1000}});
 console.log(engine)
 player = new Clappr.Player({
     source:'https://edge-gcp.voodfy.com/hls/v2/QmTGVN4CHKb9fQWCSHsAXVcKVTFmJEtXBJdeDenzrkehfk/5f98b562977c5f4c7460dd9f_,v6.mp4,v7.mp4,a1.m4a,.urlset/master.m3u8',
